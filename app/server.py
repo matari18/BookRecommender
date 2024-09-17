@@ -3,11 +3,10 @@ from typing import List
 import joblib
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 
 
-model = joblib.load('./artifacts/model.joblib')
-book_pivot = joblib.load('./artifacts/book_pivot.joblib')
+model = joblib.load('artifacts/model.joblib')
+book_pivot = joblib.load('artifacts/book_pivot.joblib')
 book_names = joblib.load('artifacts/book_names.joblib')
 
 app = FastAPI()
